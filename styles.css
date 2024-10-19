@@ -146,12 +146,20 @@ body {
 .yamaguchi-voice-block {
     width: 100%;
     display: flex;
-    background: url(img/yamaguchi-voice-block__back.png);
-    background-color: #2C2C2C;
+    background-color: #181818;
     z-index: 7;
     position: relative;
     overflow-y: hidden;
     padding-bottom: 87px;
+}
+
+.yamaguchi_back {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 5;
 }
 
 .yamaguchi-voice-block__text-describe {
@@ -159,6 +167,7 @@ body {
     max-width: 670px;
     flex-direction: column;
     padding: 72px 0 0 99px;
+    z-index: 5;
 }
 
 .headline {
@@ -198,6 +207,7 @@ color: #fff;
     width: 100%;
     margin-top: 33px;
     justify-content: center;
+    margin-left: 59px;
 }
 
 .yamaguchi-voice-block__speak-block {
@@ -210,13 +220,14 @@ color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     max-width: 435px;
     width: 100%;
+    position: relative;
 }
 
 .yamaguchi-voice-block__device-block {
-  display: flex;
+    display: flex;
+    z-index: 5;
 }
 
 .device-img {
@@ -224,53 +235,124 @@ color: #fff;
 }
 
 .woman_figure {
-    bottom: -150px;
-    position: absolute;
+    position: relative;
     transition: 2s;
-    animation: womanVisibleAnimation 4s ease,
-    levitation 10s infinite ease;   
+    animation: womanVisibleAnimation 6s, levitation 12s infinite;
     -webkit-transition: 2s;
     -moz-transition: 2s;
     -ms-transition: 2s;
     -o-transition: 2s;
     z-index: 3;
-    -webkit-animation: womanVisibleAnimation 4s ease,
-     levitation 10s infinite ease;
+    -webkit-animation: womanVisibleAnimation 6s, levitation 12s infinite;
+    z-index: 18;
 }
 
+.woman_figure__tube {
+  display: flex;
+}
+
+
+.yamaguchi-voice-block__tube-woman {
+    display: flex;
+    flex-direction: column;
+    max-width: 435px;
+    width: 100%;
+    position: relative;
+    top: 700px;
+    height: 600px;
+    align-items: center;
+    z-index: 7;
+}
 
 
 @keyframes levitation {
-20% {
-    bottom: -150px;
-    transition: .5s;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
+10% {
+    bottom: -100px;
+    transition: 4s;
+    -webkit-transition: 4s;
+    -moz-transition: 4s;
+    -ms-transition: 4s;
+    -o-transition: 4s;
 }
+20% {
+    bottom: -200px;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+}
+  30% { 
+     bottom: -100px;
+      transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s; 
+  }
   40% { 
-     bottom: -200px; 
-      
+     bottom: -200px;
+      transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s; 
+  }
+  50% { 
+     bottom: -200px;
+      transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s; 
   }
   60% { 
-     bottom: -150px; 
-      
+     bottom: -100px;
+      transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s; 
+  }
+  70% { 
+     bottom: -100px;
+      transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s; 
   }
   80% { 
-     bottom: -200px; 
-      
+     bottom: -200px;
+      transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s; 
   }
+  90% { 
+     bottom: -100px;
+      transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s; 
+  }
+
   100% { 
-    bottom: -150px;     
-      transition: 1s;
+    bottom: -200px;     
+       transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
   }
 }
 
 @keyframes womanVisibleAnimation {
 
   from {  
-    bottom: -700px;     
+    bottom: -800px;     
     position: absolute;    
     transition: 1s;
     -webkit-transition: 1s;
@@ -285,7 +367,7 @@ color: #fff;
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
-    bottom: -150px;
+    bottom: -100px;
 }
   
 }
@@ -295,25 +377,29 @@ color: #fff;
     display: flex;
     animation: widthCircle;
     -webkit-animation: widthCircle;
-    position: absolute;
-    bottom: 0;
+    bottom: 20px;
     transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -ms-transition: 1s;
+    position: absolute;
+    z-index: 10;
     width: 193px;
-    
 }
 
 @keyframes widthCircle {
   20% {
-    opacity: 0;
+    transform: scale(1);
     width: 150px;
     transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
 }
 
 40% {
@@ -436,27 +522,27 @@ color: #fff;
 
 @keyframes levitation {
 20% {
-   bottom: -100px; 
-    transition: .5s;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
+    bottom: 300px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
 }
   40% { 
-     bottom: -50px; 
-      
+     bottom: 50px; 
+       transition: 1s;
   }
   60% { 
-     bottom: -100px; 
-      
+     bottom: 10px; 
+       transition: 1s;
   }
   80% { 
-     bottom: -50px; 
+     bottom: 50px; 
       
   }
   100% { 
-    bottom: -100px;     
+    bottom: 10px;     
       transition: 1s;
   }
 }
