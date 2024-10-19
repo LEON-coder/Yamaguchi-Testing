@@ -18,6 +18,10 @@
   font-family: "Bebas Neue";
   src: url('fonts/Bebas/BebasNeueBold.woff2');
 }
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url('fonts/Montserrat/Montserrat-Regular.woff2');
+}
 
 
 
@@ -136,6 +140,197 @@ body {
   display: none;
 }
 
+
+ /* Yamaguchi block  */
+
+.yamaguchi-voice-block {
+    width: 100%;
+    display: flex;    
+    background: url('img/yamaguchi-voice-block__back.png');
+    background-color: #2C2C2C;
+    z-index: 7;
+    position: relative;
+    overflow-y: hidden;
+    flex-wrap: wrap;
+}
+
+.yamaguchi-voice-block__text-describe {
+    display: flex;
+    max-width: 670px;
+    flex-direction: column;
+    padding: 72px 0 0 99px;
+}
+
+.headline {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 90%;
+    color: #fff;
+    max-width: 20vw;
+}
+
+.yamaguchi-voice-block__describe {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 170%;
+    color: #fff;
+    margin-top: 65px;
+    max-width: 510px;
+}
+
+  .yamaguchi-voice-block__speak-headline {
+font-family: var(--font-family);
+font-weight: 900;
+font-size: 44px;
+line-height: 90%;
+color: #fff;
+  }
+
+.yamaguchi-voice-block__ok-yamaguchi {
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 61px;
+    line-height: 90%;
+    color: #fff;
+    display: flex;
+    width: 100%;
+    margin-top: 33px;
+    justify-content: center;
+}
+
+.yamaguchi-voice-block__speak-block {
+    display: flex;
+    margin-top: 55px;
+    flex-direction: column;
+}
+
+.yamaguchi-voice-block__woman-figure_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 435px;
+    width: 100%;
+}
+
+.woman_figure {
+    bottom: -150px;
+    position: absolute;
+    transition: 2s;
+    animation: womanVisibleAnimation 4s ease,
+    levitation 10s infinite ease;   
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    z-index: 3;
+    -webkit-animation: womanVisibleAnimation 4s ease,
+     levitation 10s infinite ease;
+}
+
+
+
+@keyframes levitation {
+20% {
+    bottom: -150px;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+  40% { 
+     bottom: -200px; 
+      
+  }
+  60% { 
+     bottom: -150px; 
+      
+  }
+  80% { 
+     bottom: -200px; 
+      
+  }
+  100% { 
+    bottom: -150px;     
+      transition: 1s;
+  }
+}
+
+@keyframes womanVisibleAnimation {
+
+  from {  
+    bottom: -700px;     
+    position: absolute;    
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;    
+  }
+  to {
+    position: absolute;    
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    bottom: -150px;
+}
+  
+}
+
+
+.woman_figure_circle {
+    display: flex;
+    animation: widthCircle;
+    -webkit-animation: widthCircle;
+    position: absolute;
+    bottom: 0;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    width: 193px;
+    
+}
+
+@keyframes widthCircle {
+  20% {
+    opacity: 0;
+    width: 150px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+40% {
+  opacity: 1;
+   width: 200px;
+}
+
+60% {
+  width: 100px;
+}
+
+100% { 
+  width: 193px; 
+}
+  
+}
+
+.yamaguchi-voice-block__block-circle {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: auto;
+}
+
 @media screen and (max-width: 435px) {
 
     .page-wrap {
@@ -167,11 +362,88 @@ body {
     width: 100%;
 } 
 
+
     .table-down-frame {
-        width: 150%;
-        left: -70px;
         position: absolute;
     }
+
+    .yamaguchi-voice-block {   
+    
+}
+
+.yamaguchi-voice-block__describe {   
+    hyphens: auto;
+    word-break: auto-phrase;
+    width: 100%;
+}
+
+.yamaguchi-voice-block__speak-headline {
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 90%;
+    color: #fff;
+}
+
+    .yamaguchi-voice-block__ok-yamaguchi {
+        font-weight: 400;
+    }
+
+@keyframes womanVisibleAnimation {
+
+  from {  
+    bottom: -700px;     
+    position: absolute;    
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;    
+  }
+  to {
+    position: absolute;    
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    bottom: -100px;
+}
+  
+}
+
+    .device-img {
+        position: absolute;
+        width: 100%;
+        left: 30px;
+    }
+
+@keyframes levitation {
+20% {
+   bottom: -100px; 
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+  40% { 
+     bottom: -50px; 
+      
+  }
+  60% { 
+     bottom: -100px; 
+      
+  }
+  80% { 
+     bottom: -50px; 
+      
+  }
+  100% { 
+    bottom: -100px;     
+      transition: 1s;
+  }
+}
 
     .top-button, .down-button {
         font-size: 12px;
@@ -212,11 +484,10 @@ body {
     .mobile {
       display: flex;
     }
-    .table-top-frame {
+     .table-top-frame {
         top: 20px;
         transition: 1s;
-        width: 150%;
-        left: -70px;
+        width: 100%;
     }
 
      .table-active {
@@ -228,11 +499,9 @@ body {
     }
 
     .table-down-frame-block {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    height: 266px;
-}
+        height: 266px;
+        overflow: hidden;
+    }
 
       .mobile-table {
         display: flex;
@@ -240,4 +509,68 @@ body {
         width: 100%;
     }
 
+    /* Yamaguchi block  */
+    
+.yamaguchi-voice-block__text-describe {
+    display: flex;
+    max-width: 670px;
+    flex-direction: column;
+    padding: 17px 0 0 17px;
 }
+
+.headline {
+  font-family: var(--font-family);
+font-weight: 400;
+font-size: 34px;
+line-height: 100%;
+color: #fff;
+}
+
+    .yamaguchi-voice-block__device-block {
+        width: 100%;
+        position: relative;
+        height: 630px;
+        margin-top: 60px;
+        overflow: hidden;
+    }
+
+    .yamaguchi-voice-block__woman-figure_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        max-width: 435px;
+        width: 100%;
+        height: 756px;
+    }
+
+    .woman_figure {
+        bottom: 150px;
+        position: relative;
+        transition: 2s;
+        animation: womanVisibleAnimation 4s ease, levitation 10s infinite ease;
+        -webkit-transition: 2s;
+        -moz-transition: 2s;
+        -ms-transition: 2s;
+        -o-transition: 2s;
+        z-index: 3;
+        -webkit-animation: womanVisibleAnimation 4s ease, levitation 10s infinite ease;
+    }
+
+    .yamaguchi-voice-block__speak-block {
+        display: flex;
+        margin-top: 55px;
+        flex-direction: column;
+        order: 4;
+        position: absolute;
+        bottom: 0;        
+    }
+}
+
+  
+
+
+
+
+
+ 
