@@ -145,13 +145,13 @@ body {
 
 .yamaguchi-voice-block {
     width: 100%;
-    display: flex;    
-    background: url('img/yamaguchi-voice-block__back.png');
+    display: flex;
+    background: url(img/yamaguchi-voice-block__back.png);
     background-color: #2C2C2C;
     z-index: 7;
     position: relative;
     overflow-y: hidden;
-    flex-wrap: wrap;
+    padding-bottom: 87px;
 }
 
 .yamaguchi-voice-block__text-describe {
@@ -213,6 +213,14 @@ color: #fff;
     position: relative;
     max-width: 435px;
     width: 100%;
+}
+
+.yamaguchi-voice-block__device-block {
+  display: flex;
+}
+
+.device-img {
+  width: 100%;
 }
 
 .woman_figure {
@@ -367,9 +375,17 @@ color: #fff;
         position: absolute;
     }
 
-    .yamaguchi-voice-block {   
+    .yamaguchi-voice-block {       
+    width: 100%;
+    display: flex;
+    background: url('img/yamaguchi-voice-block__back.png');
+    background-color: #2C2C2C;
+    z-index: 7;
+    position: relative;
+    overflow-y: hidden;
+}  
     
-}
+
 
 .yamaguchi-voice-block__describe {   
     hyphens: auto;
