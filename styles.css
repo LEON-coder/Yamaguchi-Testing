@@ -158,7 +158,7 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 3;
 }
 
 .yamaguchi-voice-block__text-describe {
@@ -221,8 +221,9 @@ color: #fff;
     max-width: 435px;
     width: 100%;
     position: relative;
+    z-index: 3;
+    overflow: hidden;    
 }
-
 .yamaguchi-voice-block__device-block {
     display: flex;
     z-index: 5;
@@ -235,139 +236,118 @@ color: #fff;
 .woman_figure {
     position: relative;
     transition: 2s;
-    animation: womanVisibleAnimation 6s, levitation 12s infinite;
+    animation: womanVisibleAnimation 5s, levitation 10s infinite;
+    animation-delay: 3s;
     -webkit-transition: 2s;
     -moz-transition: 2s;
     -ms-transition: 2s;
     -o-transition: 2s;
     z-index: 3;
-    -webkit-animation: womanVisibleAnimation 6s, levitation 12s infinite;
-    z-index: 18;
+    -webkit-animation: womanVisibleAnimation 5s, levitation 10s infinite;
+    bottom: -200px;
 }
+
+
+
+
 
 .woman_figure__tube {
-  display: flex;
+    display: flex;
+    height: 760px;
+    position: absolute;
+    bottom: -610px;
+    align-items: end;
+    z-index: 1;
+    width: 100%;
+    justify-content: center;
+    background: #181818;
 }
 
-
-.yamaguchi-voice-block__tube-woman {
+.yamaguchi-voice-block__woman-figure_block-wrap {
     display: flex;
     flex-direction: column;
-    max-width: 435px;
-    width: 100%;
-    position: relative;
-    top: 700px;
-    height: 600px;
+    justify-content: center;
     align-items: center;
-    z-index: 7;
+    overflow-y: clip;
+    height: 773px;
 }
 
 
-@keyframes levitation {
-10% {
-    bottom: -100px;
-    transition: 4s;
-    -webkit-transition: 4s;
-    -moz-transition: 4s;
-    -ms-transition: 4s;
-    -o-transition: 4s;
-}
-20% {
-    bottom: -200px;
-    transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s;
-}
-  30% { 
-     bottom: -100px;
-      transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s; 
-  }
-  40% { 
-     bottom: -200px;
-      transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s; 
-  }
-  50% { 
-     bottom: -200px;
-      transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s; 
-  }
-  60% { 
-     bottom: -100px;
-      transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s; 
-  }
-  70% { 
-     bottom: -100px;
-      transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s; 
-  }
-  80% { 
-     bottom: -200px;
-      transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s; 
-  }
-  90% { 
-     bottom: -100px;
-      transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s; 
-  }
 
-  100% { 
-    bottom: -200px;     
-       transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s;
-  }
-}
 
 @keyframes womanVisibleAnimation {
 
-  from {  
-    bottom: -800px;     
-    position: absolute;    
-    transition: 1s;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;    
-  }
-  to {
-    position: absolute;    
+  from {
+    bottom: -870px;
+    position: absolute;
     transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
-    bottom: -100px;
 }
-  
+  to {
+    bottom: -100px;
+    position: absolute;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;    
+}  
+}
+
+
+@keyframes levitation {
+10% {
+     bottom: -200px;
+    transition: 4s;
+    -webkit-transition: 4s;
+    -moz-transition: 4s;
+    -ms-transition: 4s;
+    -o-transition: 4s;   
+     z-index: 3;
+    
+}
+40% {
+     bottom: -100px;
+    transition: 4s;
+    -webkit-transition: 4s;
+    -moz-transition: 4s;
+    -ms-transition: 4s;
+    -o-transition: 4s;    
+    z-index: 3;
+}
+
+60% {
+     bottom: -200px;
+    transition: 4s;
+    -webkit-transition: 4s;
+    -moz-transition: 4s;
+    -ms-transition: 4s;
+    -o-transition: 4s;
+    z-index: 3;
+}
+80% {
+     bottom: -100px;
+    transition: 4s;
+    -webkit-transition: 4s;
+    -moz-transition: 4s;
+    -ms-transition: 4s;
+    -o-transition: 4s;
+    z-index: 3;
+}
+
+
+  100% {
+        bottom: -200px;
+       transition: 4s;
+       -webkit-transition: 4s;
+       -moz-transition: 4s;
+       -ms-transition: 4s;
+       -o-transition: 4s;
+       z-index: 3;
+}
 }
 
 
@@ -375,20 +355,48 @@ color: #fff;
     display: flex;
     animation: widthCircle;
     -webkit-animation: widthCircle;
+    animation-duration: 1s;
     bottom: 20px;
-    transition: 1s;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    position: absolute;
-    z-index: 10;
     width: 193px;
+    position: absolute;
+    left: 115px;
 }
 
 @keyframes widthCircle {
   20% {
-    transform: scale(1);
-    width: 150px;
+    width: 193px;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+}
+  40% {
+    width: 200px;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+  60% {   
+    width: 260px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+  80% {   
+    width: 160px;
     transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
@@ -400,14 +408,7 @@ color: #fff;
     -o-transform: scale(1);
 }
 
-40% {
-  opacity: 1;
-   width: 200px;
-}
 
-60% {
-  width: 100px;
-}
 
 100% { 
   width: 193px; 
@@ -479,7 +480,144 @@ color: #fff;
     position: relative;
     overflow-y: hidden;
 }  
+
+    .woman_figure_circle {
+        justify-content: center;
+        align-items: center;
+        left: auto;
+        bottom: 0px;
+    }
+
+@keyframes womanVisibleAnimation {
+
+  from {
+    bottom: -870px;
+    position: absolute;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+  to {
+    bottom: -100px;
+    position: absolute;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;    
+}  
+}
+
+
+@keyframes levitation {
+20% {
+     bottom: -500px;
+    transition: 4s;
+    -webkit-transition: 4s;
+    -moz-transition: 4s;
+    -ms-transition: 4s;
+    -o-transition: 4s;   
+     z-index: 3;
     
+}
+40% {
+     bottom: -600px;
+    transition: 4s;
+    -webkit-transition: 4s;
+    -moz-transition: 4s;
+    -ms-transition: 4s;
+    -o-transition: 4s;    
+    z-index: 3;
+}
+
+60% {
+     bottom: -300px;
+    transition: 4s;
+    -webkit-transition: 4s;
+    -moz-transition: 4s;
+    -ms-transition: 4s;
+    -o-transition: 4s;
+    z-index: 3;
+}
+80% {
+     bottom: -400px;
+    transition: 4s;
+    -webkit-transition: 4s;
+    -moz-transition: 4s;
+    -ms-transition: 4s;
+    -o-transition: 4s;
+    z-index: 3;
+}
+
+
+  100% {
+        bottom: -300px;
+       transition: 4s;
+       -webkit-transition: 4s;
+       -moz-transition: 4s;
+       -ms-transition: 4s;
+       -o-transition: 4s;
+       z-index: 3;
+}
+}
+
+    
+
+@keyframes widthCircle {
+  20% {
+    width: 193px;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+}
+  40% {
+    width: 200px;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+  60% {   
+    width: 260px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+  80% {   
+    width: 160px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+
+
+100% { 
+  width: 193px; 
+}
+  
+}
 
     .yamaguchi-voice-block__describe {
         hyphens: auto;
@@ -518,10 +656,12 @@ font-size: 49px;
 line-height: 90%;
 color: #fff;
 }
+
+
 @keyframes womanVisibleAnimation {
 
   from {  
-    bottom: -700px;     
+    bottom: -500px;     
     position: absolute;    
     transition: 1s;
     -webkit-transition: 1s;
@@ -535,8 +675,7 @@ color: #fff;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -ms-transition: 1s;
-    -o-transition: 1s;
-    bottom: -100px;
+    -o-transition: 1s;    
 }
   
 }
@@ -549,7 +688,7 @@ color: #fff;
 
 @keyframes levitation {
 20% {
-    bottom: 300px;
+    bottom: -100px;
     transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
@@ -557,19 +696,19 @@ color: #fff;
     -o-transition: 1s;
 }
   40% { 
-     bottom: 50px; 
+     bottom: -50px; 
        transition: 1s;
   }
   60% { 
-     bottom: 10px; 
+     bottom: -100px; 
        transition: 1s;
   }
   80% { 
-     bottom: 50px; 
+     bottom: -50px; 
       
   }
   100% { 
-    bottom: 10px;     
+    bottom: -100px;     
       transition: 1s;
   }
 }
@@ -667,9 +806,10 @@ color: #fff;
     }
 
     .woman_figure {
-        bottom: 150px;
+        bottom: 0;
         width: 100%;
     }
+
 
     .yamaguchi-voice-block__speak-block {
         display: flex;
